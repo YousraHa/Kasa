@@ -1,0 +1,13 @@
+.banniere {
+    display: flex;
+    position: absolute;
+    width: 1240px;
+    height: 223px;
+    left: 100px;
+    mix-blend-mode: darken;
+    top: 171px;
+    /* opacity: 0.3; */
+    /* background-color: red; */
+    background-image: url(../../public/banniere.png);
+    border-radius: 25px;
+}
