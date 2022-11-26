@@ -7,8 +7,9 @@ const Accueil=()=> {
     return (
       // <>
       <div className='container'>
-        <Banniere/>
-        <Card />
+        accueil
+        {/* <Banniere/>
+        <Card /> */}
         {/* <Card/> */}
       </div>
       // </>
