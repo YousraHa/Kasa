@@ -1,0 +1,22 @@
+/* #root{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: aqua;
+} */
+
+
+.wrapper,
+html,
+body {
+	height: 100%;
+	/* margin: 0; */
+}
+
+.wrapper {
+    display: flex;
+    flex:1;
+    /* flex-direction: column; */
+    background-color: blueviolet;
+    border: 1px solid;
+  }

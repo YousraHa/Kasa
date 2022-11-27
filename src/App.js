@@ -9,6 +9,7 @@ import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 import Logement from "./pages/fichelogement";
 import Propos from "./pages/apropos"
 import Accueil from "./pages/accueil";
+import './css/App.css'
 
 // class App extends Component {
 //   render() {
@@ -35,14 +36,9 @@ import Accueil from "./pages/accueil";
 //   }
 // }
 
-// export default App;
-
-class App extends Component {
-  render() {
-    return (
     // <Router>
-        <div>
-          {/* <h2>Welcome to React Router Tutorial</h2>
+          //   </Router>
+          /* <h2>Welcome to React Router Tutorial</h2>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <ul className="navbar-nav mr-auto">
             <li><Link to={'/'} className="nav-link"> Home </Link></li>
@@ -50,14 +46,20 @@ class App extends Component {
             <li><Link to={'/logement'} className="nav-link">About</Link></li>
           </ul>
           </nav>
-          <hr /> */}
+          <hr /> */
+
+// export default App;
+
+class App extends Component {
+  render() {
+    return (
+          <div className='wrapper'>
           <Routes>
               <Route exact path='/' element={<Accueil/>} />
               <Route path='/propos' element={<Propos/>} />
               <Route path='/logement' element={<Logement/>} />
           </Routes>
-        </div>
-    //   </Router>
+         </div>
     );
   }
 }

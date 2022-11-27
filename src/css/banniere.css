@@ -1,8 +1,8 @@
 .banniere {
     display: flex;
-    position: absolute;
-    width: 1240px;
-    height: 223px;
+    /* position: absolute; */
+    width: 70%;
+    height: 20%;
     left: 100px;
     mix-blend-mode: darken;
     top: 171px;

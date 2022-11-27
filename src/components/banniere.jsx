@@ -1,5 +1,5 @@
 import React from 'react';
-import './banniere.css'
+import '../css/banniere.css'
 
 
 const Banniere = () => {
