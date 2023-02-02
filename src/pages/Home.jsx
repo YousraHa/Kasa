@@ -12,7 +12,7 @@ export default function Home () {
     //   <br />
     // </div>
     <>
-    <div className="nav">
+    <div className="homeNav">
       <Nav/>
     </div>
     <div className="homeBanner">

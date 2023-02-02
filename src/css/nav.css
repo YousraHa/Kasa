@@ -1,7 +1,13 @@
 .nav{
     display: flex;
-    border: solid 1px;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    border: solid 1px blue;
+    /* justify-content: space-between;
+    align-items: center; */
+    /* width: 100%; */
+    margin: 20px auto;
+    width: 90%;
+    height: 223px;
+    left: 100px;
+    top: 171px;
+    max-width: 90%;
 }
