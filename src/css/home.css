@@ -18,3 +18,12 @@
     display: flex;
     flex-direction: row;
 }
+
+.homeNav{
+    margin: 10px auto;
+    max-width: 90%;
+    /* margin-right: auto;
+    margin-left: auto; */
+    padding: 1rem;
+    border: solid 1px red;
+}

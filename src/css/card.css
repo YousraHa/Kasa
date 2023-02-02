@@ -23,5 +23,12 @@
     left: 0px;
     top: 0px;
     border-radius: 10px;
+    justify-content: left;
+    align-items: flex-end;
     /* flex: 1; */
+}
+
+.card p {
+  display: flex;
+  justify-content: center;
 }
