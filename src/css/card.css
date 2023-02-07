@@ -17,7 +17,9 @@
     right: 0px;
     top: 0%;
     bottom: 0%; */
-    background-color: #FF6060;
+    /* background-image: url({props.cover}); */
+    /* background-color: #FF6060; */
+    background-color: white;
     height: 340px;
     width: 340px;
     left: 0px;
@@ -25,6 +27,7 @@
     border-radius: 10px;
     justify-content: left;
     align-items: flex-end;
+    /* max-width: 30%; */
     /* flex: 1; */
 }
 

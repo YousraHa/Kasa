@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../components/card";
 import Banner from "../components/banner";
 import Nav from "../components/nav"
+import Api from "../hooks/api";
 import '../css/home.css'
 
 export default function Home () {
@@ -20,8 +21,9 @@ export default function Home () {
 
     </div>
     <div className="home">
-        <Card />
-        <Card/>
+        {/* <Card title="premiere card"/>
+        <Card/> */}
+        <Api/>
     </div>
     </>
   );
