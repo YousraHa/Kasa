@@ -4,7 +4,8 @@ const Nav = () => {
     return (
     <nav className='navigation'>
         <a href="/">
-            KASA
+            {/* KASA */}
+        <img src="../../LOGO.png" alt="nhbb" style={{height: "40px"}}/>
         </a>
         {/* <button className="hamburger">
         <svg

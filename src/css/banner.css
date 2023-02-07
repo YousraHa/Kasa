@@ -5,9 +5,12 @@ width: 90%;
 height: 150px;
 left: 100px;
 top: 171px;
-border: solid 1px;
+/* border: solid 1px; */
 margin: 20px auto;
 padding: 20px;
+background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url('../../public/banner.png');
+background-size: cover;
+/* background-repeat: no-repeat; */
 /* background: #000000; */
 mix-blend-mode: darken;
 /* opacity: 0.3; */
@@ -19,6 +22,7 @@ align-items: center;
 
 .banner p{
     display: flex;
-    color: red;
-    border: solid 1px;
+    color: white;
+    font-size: 50px
+    /* border: solid 1px; */
 }
