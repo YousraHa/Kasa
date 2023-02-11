@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import housing from './data.json'
+
 // import axios from "axios";
 
 // export default function Api (){
@@ -116,6 +115,8 @@ import housing from './data.json'
 
 // export default Api;
 
+import React, { useEffect, useState } from "react";
+import housing from './data.json'
 import Card from "../components/card";
 
 const Api =() =>{
@@ -129,7 +130,7 @@ const Api =() =>{
                         title={title}
                         cover={cover}
                     />
-                ))}
+                ))} 
         </>
     )
 }

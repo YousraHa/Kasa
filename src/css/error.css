@@ -1,0 +1,20 @@
+.error{
+    display: flex;
+    color: #FF6060;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 50px; */
+    height: 84vh;
+    /* flex-wrap: wrap; */
+}
+
+.error h1{
+    font-weight: 900;
+    font-size: 150px;
+    margin: 0;
+}
+
+.error a{
+    margin-top: 180px;
+}
