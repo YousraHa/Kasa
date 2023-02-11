@@ -1,28 +1,24 @@
 import React from "react";
-import Card from "../components/card";
 import Banner from "../components/banner";
 import Nav from "../components/nav"
 import Api from "../hooks/api";
+import url  from "../img/banner2.png"
+
+// import url  from "../../public/banner2.png"
 import '../css/home.css'
 
 export default function Home () {
+
+  // const url = '../../public/banner2.png';
   return (
-    // <div className="home">
-    //   <h1>My progression</h1>
-    //   <div>Welcome to this site devoted to your programming progression</div>
-    //   <br />
-    // </div>
     <>
     <div className="homeNav">
       <Nav/>
     </div>
     <div className="homeBanner">
-        <Banner/>
-
+        <Banner name="Chez vous, partout et ailleurs" pic={url}/>
     </div>
     <div className="home">
-        {/* <Card title="premiere card"/>
-        <Card/> */}
         <Api/>
     </div>
     </>

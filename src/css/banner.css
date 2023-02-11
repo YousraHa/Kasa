@@ -8,7 +8,8 @@ top: 171px;
 /* border: solid 1px; */
 margin: 20px auto;
 padding: 20px;
-background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url('../../public/banner.png');
+/* background-image: url('../../public/banner2.png'); */
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 background-size: cover;
 /* background-repeat: no-repeat; */
 /* background: #000000; */
