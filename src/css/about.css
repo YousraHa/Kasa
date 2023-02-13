@@ -1,4 +1,20 @@
-.about{
-    /* display: flex; */
-    height: 100vh;
+
+.ctn{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 60%;
+    justify-content: center;
+    justify-content: flex-start;
+    justify-items: center;
+    align-items: center;
+    justify-self: center;
+    gap: 25px;
+    margin: auto;
 }
+
+@media screen and (max-width: 480px) {
+    .ctn {
+      width: 85%;
+    }
+  }

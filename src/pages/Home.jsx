@@ -12,9 +12,9 @@ export default function Home () {
   // const url = '../../public/banner2.png';
   return (
     <>
-    <div className="homeNav">
+    {/* <div className="homeNav">
       <Nav/>
-    </div>
+    </div> */}
     <div className="homeBanner">
         <Banner name="Chez vous, partout et ailleurs" pic={url}/>
     </div>
