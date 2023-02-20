@@ -1,0 +1,77 @@
+.housing{
+/* height: 100%; */
+margin: auto;
+
+}
+
+/* .houseBanner{
+} */
+
+.info{
+    display: flex;
+    border: 1px red solid;
+    position: relative;
+    padding: 1rem;
+    align-items: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+
+
+}
+
+/* .title{ */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin-left: auto; */
+/* } */
+
+.host{
+    margin-left: auto;
+}
+
+.host img{
+    border-radius: 50%;
+    height: 80px;
+}
+
+.host span{
+    color: pink;
+}
+
+.dropdown2{
+    display: flex;
+    flex-direction: row;
+    max-width: 65%;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;
+    gap: 25px;
+    position: relative;
+}
+
+
+@media screen and (max-width: 580px) {
+    .dropdown2 {
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
+
+.tags{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.tags p{
+    background-color: #FF6060;
+    color: white;
+    /* border: solid 1px red; */
+    margin: 10px;
+    list-style:none;
+    border-radius: 15px;
+    padding: 5px;
+}

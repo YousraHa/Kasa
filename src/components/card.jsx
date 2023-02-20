@@ -1,3 +1,4 @@
+import { redirect } from 'react-router-dom';
 import '../css/card.css'
 
 const Card = (props) => {
@@ -7,19 +8,15 @@ const Card = (props) => {
         cover
     } = props;
 
+    // console.log(title, id);
+    const path = `/housing/${id}`;
+
     return (
-    <div className='card' style={{backgroundImage: `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url(${cover})`, backgroundSize:"cover", backgroundRepeat: "no-repeat"}}>
-        <p>{title}</p>
-        {/* <p>{id}</p> */}
-        {/* <p>{cover}</p> */}
-        {/* <img src={cover} alt="image" style={{height: "150px", backgroundImage: "URL({cover})"}} /> */}
-
-        {/* <p>{description}</p>
-        <p>{rating}</p>
-        <p>{location}</p>
-        <p>{title}</p> */}
-
-    </div>
+    <a href={path}>
+        <div className='card' style={{backgroundImage: `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url(${cover})`, backgroundSize:"cover", backgroundRepeat: "no-repeat"}}>
+            <p>{title}</p>
+        </div>
+    </a>
     );
 }
 

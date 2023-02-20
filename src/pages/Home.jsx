@@ -1,26 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "../components/banner";
-import Nav from "../components/nav"
-import Api from "../hooks/api";
-import url  from "../img/banner2.png"
+import Card from "../components/card";
+import url  from "../img/banner01.png";
+import '../css/home.css';
 
-// import url  from "../../public/banner2.png"
-import '../css/home.css'
+export default function Home (props) {
 
-export default function Home () {
+// console.log(props.housing, 'props home');
+console.log(props.height, "height");
 
-  // const url = '../../public/banner2.png';
   return (
     <>
-    {/* <div className="homeNav">
-      <Nav/>
-    </div> */}
-    <div className="homeBanner">
-        <Banner name="Chez vous, partout et ailleurs" pic={url}/>
-    </div>
-    <div className="home">
-        <Api/>
-    </div>
-    </>
-  );
+      <div className="homeBanner">
+          <Banner name="Chez vous, partout et ailleurs" pic={url} height="150px"/>
+      </div>
+      <div className="home">
+        {props.housing.map(({ id, title, cover }) => (
+              <Card key={id} title={title} cover={cover} id={id}/>
+              ))} 
+      </div>
+      </>
+    );
+
 }
