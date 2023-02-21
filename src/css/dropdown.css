@@ -46,7 +46,7 @@
     position: relative;
     /* border: 1px solid red; */
     background-color: #FF6060;
-    border-radius: 3px;
+    border-radius: 9px;
     width: 100%;
     cursor: pointer;
     /* display: flex; */
@@ -54,11 +54,12 @@
   .material-symbols-outlined{
     float: right;
     color: white;
+    font-size: 40px;
   }
 
 .dropdown div{
   color: white;
-  margin: 7px;
+  margin: 11px;
   cursor: pointer;
 }
 

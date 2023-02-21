@@ -15,6 +15,8 @@ export default function Housing (props) {
   } = props
 
   const getHouse = housing.findIndex(house => house.id === params.houseId)
+
+  //gerer les mauvais id, erreur
   const oneHouse = housing[getHouse]
   console.log(oneHouse, 'propsgethouse')
 
@@ -40,8 +42,10 @@ export default function Housing (props) {
       <div className="info">
         
         <div className="title">
-          <h1>{title}</h1>
-          <p>{location}</p>
+          <div className="mainTitle">
+            <h1>{title}</h1>
+            <p>{location}</p>
+          </div>
           {/* <ul className="tags">
             {tags.map(tag=><li>{tag}</li>)}
           </ul> */}
@@ -50,20 +54,24 @@ export default function Housing (props) {
           </div>
         </div>
 
-        <div className="host">
-          <p>{host.name}</p>
-          <img src={host.picture} alt="host picture" />
-          <span className="material-symbols-outlined">
-            star
-          </span>
-        </div>
+        {/* <div className="host"> */}
+          {/* <div className="span"> */}
+          <div className="host">
 
+            <div className="floatright">
+              <p>{host.name}</p>
+              <img src={host.picture} alt="host picture" />
+            </div>
+            <div>
+{Array.from({length: rating}, (i) =><span key={i} className="material-icons">star</span>)}
+{Array.from({length: 5 - rating}, (i) =><span key={i} className="material-icons" style={{color: "#E3E3E3"}}>star</span>)}
+            </div>
+          </div>
         </div>
         <div className="dropdown2">
           <DropDown1 title="Description" text={description}/>
           <DropDown2 title="Equipements" text={equipments}/>
         </div>
-      {/* <br /> */}
     </div>
   );
 }

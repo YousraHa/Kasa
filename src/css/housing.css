@@ -1,47 +1,59 @@
 .housing{
 /* height: 100%; */
 margin: auto;
-
+width: 90%;
 }
-
-/* .houseBanner{
-} */
 
 .info{
     display: flex;
-    border: 1px red solid;
+    /* border: 1px red solid; */
     position: relative;
-    padding: 1rem;
+    /* padding: 1rem; */
     align-items: center;
     margin-bottom: 20px;
     text-decoration: none;
-
-
+    color: #FF6060;
+    width: 100%;
 }
 
-/* .title{ */
-    /* display: flex; */
-    /* flex-direction: column; */
+.title{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     /* margin-left: auto; */
-/* } */
+}
+
+.mainTitle p, h1{
+    margin: 0px;
+}
 
 .host{
     margin-left: auto;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 15px;
+
 }
 
 .host img{
     border-radius: 50%;
-    height: 80px;
+    height: 60px;
 }
 
 .host span{
-    color: pink;
+    color: #FF6060;
+    font-size: 35px;
+}
+
+.material-icons{
+    color: grey;
 }
 
 .dropdown2{
     display: flex;
     flex-direction: row;
-    max-width: 65%;
+    /* max-width: 65%; */
     margin-top: 20px;
     justify-content: space-between;
     align-items: flex-start;
@@ -50,28 +62,77 @@ margin: auto;
     position: relative;
 }
 
-
-@media screen and (max-width: 580px) {
-    .dropdown2 {
-      width: 85%;
-      display: flex;
-      flex-direction: column;
-
-    }
-  }
-
 .tags{
     display: flex;
     flex-direction: row;
-
+    gap: 7px;
 }
 
 .tags p{
     background-color: #FF6060;
     color: white;
     /* border: solid 1px red; */
-    margin: 10px;
+    /* margin: 10px; */
     list-style:none;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 5px;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    font-size: 11px;
 }
+
+@media screen and (max-width: 580px) {
+
+    .dropdown2 {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        /* border: 1px red solid; */
+        position: relative;
+        /* padding: 1rem; */
+        align-items: center;
+        margin-bottom: 20px;
+        text-decoration: none;
+        color: #FF6060;
+        width: 100%;
+    }
+
+    .host{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+
+    .host span{
+        /* margin-left: 200px; */
+        color: #FF6060;
+
+    }
+    .floatright{
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .title{
+        width: 100%;
+      }
+      .material-icons{
+        color: grey;
+    }
+  }
+
+  .floatright{
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }

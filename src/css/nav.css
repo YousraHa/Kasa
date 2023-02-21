@@ -8,9 +8,14 @@
     top: 171px;
     max-width: 90%;
 } */
-a:visited, a:hover {
+/* a:visited, a:hover {
     text-decoration: none;
     color: #FF6060;
+} */
+
+.navigation a{
+  text-decoration: none;
+  color: #FF6060;
 }
 
 .navigation{
