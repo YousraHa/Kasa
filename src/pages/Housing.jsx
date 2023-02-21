@@ -1,14 +1,16 @@
 // import * as React from "react";
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Redirect, useParams, Navigate } from "react-router-dom";
 import DropDown1 from "../components/dropdown";
 import DropDown2 from "../components/dropdown2";
 import Banner from "../components/banner";
+import Error from "../pages/Error"
 import "../css/housing.css"
 
 export default function Housing (props) {
 
   let params = useParams();
+
   console.log(params.houseId)
   const {
     housing
@@ -18,7 +20,15 @@ export default function Housing (props) {
 
   //gerer les mauvais id, erreur
   const oneHouse = housing[getHouse]
-  console.log(oneHouse, 'propsgethouse')
+
+console.log(params.houseId, 'params')
+console.log(oneHouse.id, 'houseid')
+// console.log()
+
+  // if(params.houseId =! oneHouse.id){
+  //   return <Navigate to="/error" replace={true}/>
+  // }
+  console.log(oneHouse.id, 'propsgethouse')
 
   const {
     id,
@@ -33,11 +43,17 @@ export default function Housing (props) {
     tags
   } = oneHouse
 
-  return (
-    <div className="housing">
-      {/* <h1>Fiche logement</h1> */}
 
-      {/* <DropDown text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."/> */}
+// if(params.houseId ==! oneHouse.id){
+//     // return <Navigate to="/error"/>
+//     console.log('hi')
+//   }
+
+
+return (
+
+    <div className="housing">
+
       <Banner pic={pictures[0]} height="415px"/>
       <div className="info">
         
@@ -46,25 +62,18 @@ export default function Housing (props) {
             <h1>{title}</h1>
             <p>{location}</p>
           </div>
-          {/* <ul className="tags">
-            {tags.map(tag=><li>{tag}</li>)}
-          </ul> */}
           <div className="tags">
           {tags.map(tag=><p>{tag}</p>)}
           </div>
         </div>
-
-        {/* <div className="host"> */}
-          {/* <div className="span"> */}
           <div className="host">
-
             <div className="floatright">
               <p>{host.name}</p>
               <img src={host.picture} alt="host picture" />
             </div>
             <div>
-{Array.from({length: rating}, (i) =><span key={i} className="material-icons">star</span>)}
-{Array.from({length: 5 - rating}, (i) =><span key={i} className="material-icons" style={{color: "#E3E3E3"}}>star</span>)}
+              {Array.from({length: rating}, (i) =><span key={i} className="material-icons">star</span>)}
+              {Array.from({length: 5 - rating}, (i) =><span key={i} className="material-icons" style={{color: "#E3E3E3"}}>star</span>)}
             </div>
           </div>
         </div>

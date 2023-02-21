@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route, useParams } from "react-router-dom";
+import { Routes, Route, useParams, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Housing from './pages/Housing';
@@ -20,10 +20,11 @@ function App(props) {
 
   const [items, setItems] = useState([housing]);
 
-  // console.log(housing, 'housing')
-  // console.log([housing], '[housing]')
+  // if(houseId ==! items.id){
+  //   // return <Navigate to="/error"/>
+  //   console.log('hi')
+  // }
 
-  // console.log(items, 'items')
   return (
   <>
       <div className="homeNav">
@@ -32,7 +33,7 @@ function App(props) {
       <Routes>
           <Route path="/" element={<Home housing={housing}/>} />
           <Route path="about" element={<About />} />
-          <Route  path="housing/:houseId" element={<Housing housing={housing}/>}/>
+          <Route  exact path="housing/:houseId" element={<Housing housing={housing}/>}/>
           <Route path="*" element={<Error />} />
       </Routes>
       <Footer/>
@@ -41,6 +42,3 @@ function App(props) {
 }
 
 export default App;
-
-
-// {<Housing housing={getHouse}/>}
