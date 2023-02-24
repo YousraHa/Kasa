@@ -13,15 +13,15 @@ import housing from './hooks/data.json'
 //recuperer liste ici et passer en props
 
 function App(props) {
-
+  // const navigate = useNavigate();
   let {
     houseId
   } = useParams();
 
   const [items, setItems] = useState([housing]);
 
-  // if(houseId ==! items.id){
-  //   // return <Navigate to="/error"/>
+  // if(houseId > 5){
+  //   navigate('/error')
   //   console.log('hi')
   // }
 
@@ -34,7 +34,7 @@ function App(props) {
           <Route path="/" element={<Home housing={housing}/>} />
           <Route path="about" element={<About />} />
           <Route  exact path="housing/:houseId" element={<Housing housing={housing}/>}/>
-          <Route path="*" element={<Error />} />
+          <Route exact path="*" element={<Error />} />
       </Routes>
       <Footer/>
   </>
