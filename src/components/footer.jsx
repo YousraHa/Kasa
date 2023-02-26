@@ -6,7 +6,7 @@ const Footer = () => {
         <a href="/">
             <img src="../../kasa1.png" alt="icon" style={{height: "40px", color: "white"}}/>
         </a>
-        <a>2020 Kasa. All rights reserved</a>
+        <p>© 2020 Kasa. All rights reserved</p>
     </footer>
     );
 }

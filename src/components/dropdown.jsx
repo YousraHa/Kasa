@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import './ddtest.css'
 import '../css/dropdown.css'
 
 
@@ -10,18 +9,12 @@ export default  function DropDown1 (props) {
     title
   } = props;
 
-//   const handleMenuOne = () => {
-//     console.log('clicked one');
-//   };
+  const [open] = React.useState(false);
 
-//   const handleMenuTwo = () => {
-//     console.log('clicked two');
-//   };
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpen = () => {
-    setOpen(!open);
-  };
+  // const handleOpen = () => {
+  //   setOpen(!open);
+  // };
+  
     return (
         <Dropdown
             open={open}
@@ -102,56 +95,3 @@ const Dropdown = ({ trigger, menu }) => {
     </div>
   );
   };
-
-
-//   <span class="material-symbols-outlined">
-// expand_less
-// </span>
-
-// <span class="material-symbols-outlined">
-// expand_more
-// </span>
-
-// export default function DropDown () {
-//   const [open, setOpen] = React.useState(false);
-
-//   const handleOpen = () => {
-//     setOpen(!open);
-//   };
-
-//   const handleMenuOne = () => {
-//     // do something
-//     setOpen(false);
-//   };
-
-//   const handleMenuTwo = () => {
-//     // do something
-//     setOpen(false);
-//   };
-
-//   return (
-//     <Dropdown
-//       open={open}
-//       trigger={<div onClick={handleOpen}>Dropdown</div>}
-//       menu={[
-//         <div onClick={handleMenuOne}>Menu 1</div>,
-//         <div onClick={handleMenuTwo}>Menu 2</div>,
-//       ]}
-//     />
-//   );
-// };
-
-// const Dropdown = ({ open, trigger, menu }) => {
-//   return (
-//     <div className="dropdown">
-//       {trigger}
-//       {open ? (
-//         <ul className="menu">
-//           {menu.map((menuItem, index) => (
-//             <li key={index} className="menu-item">{menuItem}</li>
-//           ))}
-//         </ul>
-//       ) : null}
-//     </div>
-//   );
-// };

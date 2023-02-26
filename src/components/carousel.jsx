@@ -1,12 +1,9 @@
 import React, {useState} from 'react'
-import '../css/carousel.css'
 import BtnSlider from './btnSlider'
-// import dataSlider from './dataSlider'
 import Banner from "../components/banner"
+import '../css/carousel.css'
 
 export default function Slider(props) {
-
-console.log(props.slides, 'pripspict');
   
     const [slideIndex, setSlideIndex] = useState(1)
 
@@ -27,15 +24,13 @@ console.log(props.slides, 'pripspict');
             setSlideIndex(props.slides.length)
         }
     }
-
     const moveDot = index => {
         setSlideIndex(index)
     }
     
-    {
-        if(props.slides.length == 1){
+    if(props.slides.length === 1){
             return (
-                <Banner pic={props.slides} height="400px"/>
+                <Banner pic={props.slides} height="400px" disabled />
             )
     } 
     return (
@@ -43,11 +38,12 @@ console.log(props.slides, 'pripspict');
             {props.slides.map((obj, index) => {
                 return (
                     <div
-                        key={obj.id}
+                        key={obj}
                         className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                     >
                         <img 
                         src={obj} 
+                        alt="housing "
                         />
                     </div>
                 )
@@ -56,15 +52,15 @@ console.log(props.slides, 'pripspict');
             <BtnSlider moveSlide={nextSlide} direction={"next"} />
             <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
 
-            {/* <div className="container-dots">
-                {Array.from({length: 5}).map((item, index) => (
+            <div className="container-dots">
+                {Array.from({length: props.slides.length}).map((item, index) => (
                     <div 
+                    key={index}
                     onClick={() => moveDot(index + 1)}
                     className={slideIndex === index + 1 ? "dot active" : "dot"}
                     ></div>
                 ))}
-            </div> */}
+            </div>
         </div>
     )
     }
-}

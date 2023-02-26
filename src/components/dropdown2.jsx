@@ -1,29 +1,15 @@
 import * as React from 'react';
-// import './ddtest.css'
-import '../css/dropdown.css'
+import '../css/dropdown.css';
 
 export default function DropDown2(props){
     const {
         text,
         title
       } = props;
+
+      const [open] = React.useState(false);
     
-    //   console.log(text[0], 'text');
-    
-      const handleMenuOne = () => {
-        console.log('clicked one');
-      };
-    
-      const handleMenuTwo = () => {
-        console.log('clicked two');
-      };
-      const [open, setOpen] = React.useState(false);
-    
-      const handleOpen = () => {
-        setOpen(!open);
-      };
-    
-      const test = text.map(elem=><li>{elem}</li>);
+      const test = text.map(elem=><p>{elem}</p>);
 
           return (
                 <Dropdown
@@ -34,8 +20,6 @@ export default function DropDown2(props){
           );
 };
 
-
-/////////////////////////////
 
 const Dropdown = ({ trigger, menu }) => {
   const [open, setOpen] = React.useState(false);
@@ -55,8 +39,8 @@ const Dropdown = ({ trigger, menu }) => {
       {open ? (
         <ul className="menu">
           {menu.map((menuItem, index) => (
-            <li key={index} className="menu-item">
-              {React.cloneElement(menuItem, {
+          <li key={index} className="menu-item">
+            {React.cloneElement(menuItem, {
                 onClick: () => {
                   this.onClick();
                   setOpen(false);

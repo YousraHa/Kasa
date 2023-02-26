@@ -2,7 +2,6 @@ import React from "react";
 import "../css/carousel.css";
 
 export default function BtnSlider({ direction, moveSlide }) {
-  console.log(direction, 'button');
   return (
     <button
       onClick={moveSlide}
@@ -10,7 +9,7 @@ export default function BtnSlider({ direction, moveSlide }) {
     >
     <span 
         onClick={moveSlide}
-        class="material-icons" >
+        className="material-icons" >
             {direction === "next" ? "navigate_next" : "chevron_left"}
     </span> 
     </button>

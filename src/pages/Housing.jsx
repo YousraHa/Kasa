@@ -1,11 +1,10 @@
 // import * as React from "react";
-import {React, useState, navigate} from "react";
-import { redirect, useParams } from "react-router-dom";
+import {React} from "react";
+import {useParams } from "react-router-dom";
 import DropDown1 from "../components/dropdown";
 import DropDown2 from "../components/dropdown2";
-import Banner from "../components/banner";
 import Slider from "../components/carousel";
-import Error from "../pages/Error"
+import Error from "../pages/Error";
 import "../css/housing.css"
 
 export default function Housing (props) {
@@ -18,61 +17,55 @@ export default function Housing (props) {
 
   const getHouse = housing.findIndex(house => house.id === params.houseId)
 
-  //gerer les mauvais id, erreur
   const oneHouse = housing[getHouse]
 
-  const {
-    id,
-    title,
-    cover,
-    description,
-    equipments,
-    host,
-    location,
-    pictures,
-    rating,
-    tags
-  } = oneHouse
+  // const {
+  //   title,
+  //   description,
+  //   equipments,
+  //   host,
+  //   location,
+  //   pictures,
+  //   rating,
+  //   tags
+  // } = oneHouse
 
-// console.log(pictures, "pictures")
+  if (oneHouse === undefined) { 
+    return <Error/>
+  }
 
-// if(params.houseId ==! oneHouse.id){
-//   navigate('/error')
-// }
   return (
 
     <div className="housing">
-
-      {/* <Banner pic={pictures[0]} height="415px"/> */}
-      <Slider slides={pictures}/>
+      <Slider slides={oneHouse.pictures}/>
       <div className="info">
-        
         <div className="title">
           <div className="mainTitle">
-            <h1>{title}</h1>
-            <p>{location}</p>
+            <h1>{oneHouse.title}</h1>
+            <p>{oneHouse.location}</p>
           </div>
           <div className="tags">
-          {tags.map(tag=><p>{tag}</p>)}
+          {oneHouse.tags.map((tag, i)=><p key={i}>{tag}</p>)}
           </div>
         </div>
           <div className="host">
             <div className="floatright">
-              <p>{host.name}</p>
-              <img src={host.picture} alt="host picture" />
+              <p>{oneHouse.host.name}</p>
+              <img src={oneHouse.host.picture} alt="host" />
             </div>
-            <div>
-              {Array.from({length: rating}, (i) =><span key={i} className="material-icons">star</span>)}
-              {Array.from({length: 5 - rating}, (i) =><span key={i} className="material-icons" style={{color: "#E3E3E3"}}>star</span>)}
+            <div className="stars">
+              {Array.from({length: oneHouse.rating}, (elem, i) =><span key={i} className="material-icons">star</span>)}
+              {Array.from({length: 5 - oneHouse.rating}, (elem, i) =><span key={i} className="material-icons" style={{color: "#E3E3E3"}}>star</span>)}
             </div>
           </div>
         </div>
         <div className="dropdown2">
-          <DropDown1 title="Description" text={description}/>
-          <DropDown2 title="Equipements" text={equipments}/>
+          <DropDown1 title="Description" text={oneHouse.description}/>
+          <DropDown2 title="Equipements" text={oneHouse.equipments}/>
         </div>
     </div>
   );
+
 
 // return (
 
@@ -108,3 +101,4 @@ export default function Housing (props) {
 //     </div>
 //   );
 }
+// }

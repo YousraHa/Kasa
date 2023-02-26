@@ -4,9 +4,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-top: 50px; */
-    /* height: 84vh; */
-    /* flex-wrap: wrap; */
 }
 
 .error h1{
@@ -17,4 +14,5 @@
 
 .error a{
     margin-top: 180px;
+    color: #FF6060;
 }

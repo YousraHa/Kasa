@@ -8,30 +8,26 @@
     top: 171px;
     max-width: 90%;
 } */
-/* a:visited, a:hover {
-    text-decoration: none;
-    color: #FF6060;
-} */
 
-.navigation a{
-  text-decoration: none;
+.aa{
   color: #FF6060;
 }
 
+ .aa:hover, .aa:active{
+  text-decoration: underline;
+}
+
 .navigation{
-    /* margin: 10px; */
     height: 60px;
-    /* width: 100%; */
+    width: 90%;
     display: flex;
     align-items: center;
     position: relative;
-    /* padding: 0.5rem 0rem; */
     background-color: #fff;
-    /* box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23); */
     text-decoration: none;
     color: #FF6060;
     padding: 1rem;
-
+    margin: auto;
 }
 
 .brand-name {
@@ -60,40 +56,3 @@
     display: block;
     width: 100%;
   }
-
-
-
-  /* .hamburger:hover {
-    background-color: #2642af;
-  } */
-
-  /* @media screen and (max-width: 270px) {
-    .hamburger {
-      display: block;
-    }
-  } */
-
-  /* @media screen and (max-width: 270px) {
-    .navigation-menu ul {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        flex-direction: column;
-        width: 100%;
-        height: calc(100vh - 77px);
-        background-color: white;
-        border-top: 1px solid black;
-      }
-      .navigation-menu li {
-        text-align: center;
-        margin: 0;
-      }
-      .navigation-menu li a {
-        color: black;
-        width: 100%;
-        padding: 1.5rem 0;
-      }
-      .navigation-menu li:hover {
-        background-color: #eee;
-      }
-  } */
