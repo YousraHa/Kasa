@@ -4,7 +4,7 @@ const Nav = () => {
     return (
     <nav className='navigation'>
         <a href="/">
-        <img src="../../LOGO.png" alt="nhbb" style={{height: "40px"}}/>
+        <img src="../../LOGO.png" alt="logo Kasa" style={{height: "40px"}}/>
         </a>
       <div
         className="navigation-menu">

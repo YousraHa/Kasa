@@ -5,7 +5,7 @@ import url  from "../img/banner01.png";
 import '../css/home.css';
 
 export default function Home (props) {
-
+// console.log(props, 'props');
   return (
     <>
       <div className="homeBanner">
@@ -18,5 +18,4 @@ export default function Home (props) {
       </div>
       </>
     );
-
 }
