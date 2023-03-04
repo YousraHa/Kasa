@@ -9,10 +9,6 @@ import Footer from "./components/footer";
 import housing from './data/data.json'
 
 function App() {
-  
-  // let {
-  //   houseId
-  // } = useParams();
 
   const [items] = useState(housing);
 

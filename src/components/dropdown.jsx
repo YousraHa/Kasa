@@ -84,7 +84,7 @@ const Dropdown = ({ trigger, menu }) => {
             <li key={index} className="menu-item">
               {React.cloneElement(menuItem, {
                 onClick: () => {
-                  this.onClick();
+                  // this.onClick();
                   setOpen(false);
                 },
               })}

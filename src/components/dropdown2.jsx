@@ -9,13 +9,13 @@ export default function DropDown2(props){
 
       const [open] = React.useState(false);
     
-      const test = text.map(elem=><p>{elem}</p>);
+      const list = text.map(elem=><>{elem}</>);
 
           return (
                 <Dropdown
                     open={open}
                     trigger={<div>{title}</div>}
-                    menu={test}
+                    menu={list}
               />
           );
 };
@@ -42,7 +42,7 @@ const Dropdown = ({ trigger, menu }) => {
           <li key={index} className="menu-item">
             {React.cloneElement(menuItem, {
                 onClick: () => {
-                  this.onClick();
+                  // this.onClick();
                   setOpen(false);
                 },
               })}
